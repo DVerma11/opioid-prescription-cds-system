@@ -66,6 +66,20 @@ Separate clinical workflows were developed for:
 5. Implemented sequential clinical decision pathways
 6. Tested the system using 32 clinical case scenarios
 
+## Clinical Decision Support Workflow
+
+### Acute Pain Decision Tree
+
+![Acute Pain Decision Tree](screenshots/C_Acute_Pain_Decision_Tree.png)
+
+### Recommendation for Nonopioid Therapy
+
+![Recommendation 1](screenshots/D_Recommendation_1.png)
+
+### High-Risk MME Dose Detection
+
+![MME Dose](screenshots/F_MME_Dose_Check.png)
+
 ## Example Clinical Logic
 Example rule:
 - If opioid dosage exceeds 50 MME/day:
