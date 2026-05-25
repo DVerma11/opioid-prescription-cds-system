@@ -1,116 +1,204 @@
-# Clinical Decision Support System for Reducing Unnecessary Opioid Prescriptions
+# Opioid Prescription Clinical Decision Support (CDS) System
 
 ## Project Overview
-This project presents a rule-based Clinical Decision Support System (CDSS) developed to support safer opioid prescribing practices in outpatient settings. The system was designed using Exsys Corvid and implements the 2022 CDC Clinical Practice Guidelines for Prescribing Opioids for Pain.
 
-The CDSS guides clinicians through patient-specific decision pathways and generates evidence-based recommendations related to opioid prescribing, overdose prevention, and opioid use disorder risk mitigation.
+This project presents a rule-based Clinical Decision Support System (CDS) developed using Corvid to implement the 2022 CDC Clinical Practice Guidelines for Prescribing Opioids for Pain. The system guides clinicians through evidence-based opioid prescribing workflows using interactive decision trees, recommendations, alerts, and risk mitigation strategies.
 
-## Objectives
-- Reduce unnecessary opioid prescribing
-- Support evidence-based prescribing decisions
-- Improve adherence to CDC opioid prescribing guidelines
-- Identify opioid overdose risk factors
-- Recommend safer prescribing practices
-- Mitigate opioid misuse and adverse outcomes
+The CDS system evaluates prescribing scenarios for acute, subacute, and chronic pain while identifying high-risk opioid prescribing patterns, dosage concerns, benzodiazepine interactions, naloxone recommendations, and opioid misuse considerations.
 
-## Technologies Used
-- Exsys Corvid Expert System Software
-- Rule-based Expert Systems
-- Clinical Decision Trees
-- IF/THEN Heuristic Logic
-- Healthcare Informatics
-- Clinical Decision Support Systems (CDSS)
+---
 
-## Clinical Guidelines Implemented
-The system operationalizes the 2022 CDC Clinical Practice Guidelines for Prescribing Opioids for Pain, including:
-- Nonopioid therapy recommendations
-- Immediate-release opioid recommendations
-- Morphine Milligram Equivalent (MME) dose checks
-- Prescription duration limits
-- Naloxone recommendations
-- PDMP review checks
-- Urine drug screening recommendations
-- Benzodiazepine interaction warnings
-- Opioid Use Disorder recommendations
+## Background
 
-## CDS Logic Design
-The system uses:
-- Decision trees
-- Sequential IF/THEN rules
-- Confidence variables
-- Structured questionnaires
-- Recommendation-triggering alerts
+Opioid overprescribing and opioid-related overdose remain major public health concerns in the United States. The CDC released updated opioid prescribing guidelines in 2022 to improve prescribing safety and reduce unnecessary opioid exposure.
 
-Separate clinical workflows were developed for:
-- Acute pain
-- Subacute pain
-- Chronic pain
+This project demonstrates how clinical guidelines can be translated into an interactive Clinical Decision Support workflow using rule-based healthcare informatics logic.
+
+---
 
 ## Key Features
-- Outpatient eligibility screening
-- Age-based applicability checks
-- Exclusion criteria handling
-- Opioid-naive patient evaluation
-- MME dose validation
-- PDMP review recommendations
-- Naloxone consideration
-- Urine drug testing recommendations
-- Concurrent benzodiazepine safety checks
-- Opioid Use Disorder identification
 
-## Methodology
-1. Developed decision trees based on CDC opioid guidelines
-2. Created rule-based logic using Exsys Corvid
-3. Built clinician questionnaires and variables
-4. Designed alert and recommendation workflows
-5. Implemented sequential clinical decision pathways
-6. Tested the system using 32 clinical case scenarios
+- Rule-based Clinical Decision Support System
+- Interactive opioid prescribing workflow
+- Acute and chronic pain decision trees
+- CDC guideline implementation
+- MME (Morphine Milligram Equivalent) dose evaluation
+- Naloxone risk mitigation recommendations
+- Benzodiazepine interaction alerts
+- Prescription duration monitoring
+- Opioid misuse disorder recommendations
+- Evidence-based prescribing support
 
-## Clinical Decision Support Workflow
+---
 
-### Acute Pain Decision Tree
+## Technologies Used
+
+- Corvid Expert System
+- Clinical Decision Trees
+- Rule-Based Logic
+- Healthcare Informatics
+- CDC Clinical Practice Guidelines
+- CDS Workflow Design
+
+---
+
+## Clinical Decision Support Workflow Screenshots
+
+### A. Outpatient Validation
+
+![Outpatient Validation](screenshots/A_Question_Outpatient.png)
+
+The system first validates whether the patient is being treated in an outpatient setting.
+
+---
+
+### B. Age Eligibility Check
+
+![Age Eligibility](screenshots/B_Age_Check.png)
+
+The CDS workflow confirms whether the patient is 18 years or older before proceeding.
+
+---
+
+### C. Acute Pain Decision Tree
 
 ![Acute Pain Decision Tree](screenshots/C_Acute_Pain_Decision_Tree.png)
 
-### Recommendation for Nonopioid Therapy
+Interactive workflow used to determine acute versus chronic pain management pathways.
+
+---
+
+### D. Recommendation #1 — Nonopioid Therapy
 
 ![Recommendation 1](screenshots/D_Recommendation_1.png)
 
-### High-Risk MME Dose Detection
+The CDS recommends nonpharmacologic and nonopioid therapies when appropriate.
 
-![MME Dose](screenshots/F_MME_Dose_Check.png)
+---
 
-## Example Clinical Logic
-Example rule:
-- If opioid dosage exceeds 50 MME/day:
-  - Trigger overdose risk warning
-  - Recommend tapering and reassessment
+### E. Extended Release Opioid Check
 
-Example rule:
-- If concurrent benzodiazepine use is detected:
-  - Trigger recommendation to avoid concurrent opioid prescribing
+![Extended Release Opioid Check](screenshots/E_Extended_Release_Opioid_Check.png)
 
-## Results
-Testing using multiple clinical case examples demonstrated that the CDS system successfully:
-- Guided clinicians through CDC recommendations
-- Identified overdose risk factors
-- Recommended safer opioid prescribing practices
-- Suggested alternative therapies
-- Supported evidence-based prescribing decisions
+The system evaluates whether extended-release or long-acting opioids are being prescribed.
 
-## Research Paper
-This repository includes the accompanying research paper describing:
-- Literature review
-- CDS design methodology
-- Clinical logic implementation
-- System evaluation
-- Results and conclusions
+---
 
-## Files
-- `A Clinical Decision Support System for Reducing Unnecessary Opioid Prescriptions_DV.pdf`
-- `Opioid Prescription Control CDS System by Divya Verma- Corvid download.pdf`
+### F. Recommendation #3
+
+![Recommendation 3](screenshots/F_Recommendation_3.png)
+
+The CDS recommends immediate-release opioids instead of extended-release opioids for opioid-naive patients.
+
+---
+
+### G. MME Dose Evaluation
+
+![MME Dose Check](screenshots/G_MME_Dose_Check.png)
+
+The system evaluates opioid dosage thresholds using Morphine Milligram Equivalent (MME) calculations.
+
+---
+
+### H. High-Risk Dose Recommendation
+
+![Recommendation 4 and 5](screenshots/H_Recommendation_4_5.png)
+
+High-risk opioid dosage scenarios trigger overdose risk and tapering recommendations.
+
+---
+
+### I. Duration Recommendation
+
+![Recommendation 6](screenshots/I_Recommendation_6.png)
+
+The CDS evaluates opioid prescription duration and recommends limiting therapy duration when appropriate.
+
+---
+
+### J. Prescription Duration Validation
+
+![Prescription Duration Check](screenshots/J_prescription_no_of_days_check.png)
+
+Workflow validation for opioid prescription duration monitoring.
+
+---
+
+### K. Additional Recommendation Workflow
+
+![Recommendation 6B](screenshots/K_Recommendation_6B.png)
+
+Additional prescribing guidance based on duration and opioid usage evaluation.
+
+---
+
+### M. Naloxone Risk Evaluation
+
+![Naloxone Risk Check](screenshots/M_Naloxone_Risk_Check.png)
+
+The system identifies overdose risk factors and recommends naloxone consideration.
+
+---
+
+### N. Benzodiazepine Interaction Warning
+
+![Benzodiazepine Warning](screenshots/N_Benzodiazepine_Warning.png)
+
+The CDS warns against concurrent opioid and benzodiazepine prescribing.
+
+---
+
+### O. Recommendation #8
+
+![Recommendation 8](screenshots/O_Recommendation_8.png)
+
+Risk mitigation recommendations related to opioid overdose prevention.
+
+---
+
+### P. Final Recommendation Screen
+
+![Final Recommendation](screenshots/P_Final_Recommendation.png)
+
+Final evidence-based recommendation output generated by the CDS workflow.
+
+---
+
+## Clinical Logic and Testing
+
+The project includes:
+- Rule-based prescribing logic
+- Decision-tree workflows
+- Recommendation triggers
+- Test cases and validation examples
+- Clinical scenario evaluation
+- CDC guideline mapping
+
+Detailed logic, prompts, rules, and test examples are documented in the included project paper.
+
+---
+
+## Files Included
+
+| File | Description |
+|---|---|
+| README.md | Project overview and documentation |
+| Corvid download.pdf | Clinical decision support project paper |
+| screenshots/ | CDS workflow screenshots |
+| LICENSE | MIT License |
+
+---
+
+## References
+
+- CDC Clinical Practice Guidelines for Prescribing Opioids for Pain (2022)
+- FHIR Opioid CDS Framework:
+https://build.fhir.org/ig/cqframework/opioid-cds-r4/
+
+---
 
 ## Author
-Divya Verma
-Rutgers University
-MS Health Informatics
+
+**Divya Verma**
+
+Healthcare Informatics | Clinical Decision Support | NLP Research | Healthcare AI
